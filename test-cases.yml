@@ -15,14 +15,121 @@
 - summary: |
     Успешная фильтрация товара по цене
   requirement: |
-    При неправильном логине или пароле пользователь должен получить сообщение об ошибке
+    При фильтрации по цене отображаются только подходящие товары 
   prerequisites:
-    Открыта страница логина
+    Открыта страница https://hexlet-products-store.vercel.app/ 
   test-data: |
-    Логин = Логин = hexlet Пароль = badpass
+    from=500 to=1000
   steps:
-    - Вводим логин
-    - Вводим пароль
-    - Нажимаем кнопку "Войти"
+    - В поле Price вводим значения от 500 и до 1000
   expected-result: |
-    Пользователь должен попасть на главную страницу
+    Товары должны отфильтровальться по цене
+    
+- summary: |
+    Успешная фильтрация товара по цвету
+  requirement: |
+    При фильтрации по цвету отображаются только подходящие товары 
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    empty
+  steps:
+    - Выставить фильтр по цвету
+  expected-result: |
+    Товары должны отфильтровальться по цвету
+    
+- summary: |
+    Успешная фильтрация товара по размеру
+  requirement: |
+    При фильтрации по размеру отображаются только подходящие товары 
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    empty
+  steps:
+    - Выставить фильтр по размеру
+  expected-result: |
+    Товары должны отфильтровальться по размеру
+    
+- summary: |
+    Успешный просмотр подробной информации о товаре
+  requirement: |
+    Должен открыться просмотр товара
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    iPhone 9
+  steps:
+    - Нажать на товар iPhone 9
+  expected-result: |
+    Должна открыться карточка товара
+    
+- summary: |
+    Успешный переход между страницами
+  requirement: |
+    Должна открыться следующая страница
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    кнопка=next
+  steps:
+    - Нажать кнопку next
+  expected-result: |
+    Должна открыться следующая страница
+    
+- summary: |
+    Успешное добавление товара в корзину
+  requirement: |
+    Выбранный товар должен добавиться в корзину
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    iPhone 9
+  steps:
+    - Нажать добавить в корзину iPhone 9
+  expected-result: |
+    Товар должен добавиться в корзину
+    
+- summary: |
+    Успешная просмотр корзины
+  requirement: |
+    Выбранный товар должен отображаться в корзине
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    товар=iPhone 9 кнопка=add to cart
+  steps:
+    - Нажать кнопку add to cart у товара iPhone 9
+    - нажать cart
+  expected-result: |
+    В корзине должен отобразиться выбранный товар
+    
+- summary: |
+    Успешный возврат в каталог после просмотра корзины
+  requirement: |
+    Возврат в каталог после просмотра корзины
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    товар=iPhone 9 кнопка=add to cart
+  steps:
+    - Нажать кнопку add to cart у товара iPhone 9
+    - нажать cart
+    - нажать continue shopping
+  expected-result: |
+    Возврат в каталог после просмотра корзины
+    
+- summary: |
+    Успешный возврат в каталог после просмотра корзины
+  requirement: |
+    Возврат в каталог после просмотра корзины
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    товар=iPhone 9 кнопка=add to cart
+  steps:
+    - Нажать кнопку add to cart у товара iPhone 9
+    - нажать cart
+    - нажать continue shopping
+  expected-result: |
+    Возврат в каталог после просмотра корзины
