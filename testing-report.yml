@@ -4,6 +4,10 @@
   status: pass
   
 - summary: |
+    Возврат ко всем категориям после выбора одной из них
+  status: fail
+  
+- summary: |
     фильтрация товара по цене
   status: fail
   
@@ -98,3 +102,8 @@
 - summary: |
     Кнопка "в наличии" отжата
   status: fail 
+  
+- summary: |
+    кнопка логотипа
+  status: fail 
+  
