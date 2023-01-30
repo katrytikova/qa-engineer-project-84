@@ -86,3 +86,15 @@
 - summary: |
     Совместимость с браузером Firefox
   status: pass 
+  
+- summary: |
+    Переключение языка
+  status: fail 
+
+- summary: |
+    Кнопка "в наличии" нажата
+  status: pass 
+  
+- summary: |
+    Кнопка "в наличии" отжата
+  status: fail 
