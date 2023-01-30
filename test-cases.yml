@@ -132,7 +132,7 @@
     - нажать корзину
     - нажать очистить корзину
   expected-result: |
-    автоматический возврат в каталог
+    Корзина пуста
     
 - summary: |
     Оформление заказа 
@@ -245,7 +245,7 @@
   prerequisites:
     Открыта страница https://hexlet-products-store.vercel.app/ 
   test-data: |
-    Brand= apple
+    Brand=apple
   steps:
     - в поле Brand выбрать apple
   expected-result: |
