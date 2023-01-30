@@ -11,6 +11,20 @@
     - в поле категория выбрать smartphones
   expected-result: |
     Выбираются только smartphones
+    
+- summary: |
+    Возврат ко всем категориям после выбора одной из них
+  requirement: |
+    После выбора категории можно вернуться ко всем товарам
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    категория=smartphones
+  steps:
+    - в поле категория выбрать smartphones
+    - в поле категория выбрать сброс
+  expected-result: |
+    Возврат ко всем категориям после выбора одной из них
 
 - summary: |
     Фильтрация товара по цене
