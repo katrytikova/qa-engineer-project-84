@@ -2,138 +2,138 @@
 test-cases:
   - summary: |
       Успешный поиск товара по категории
-  status: pass
+    status: pass
   
   - summary: |
-    Возврат ко всем категориям после выбора одной из них
-  status: pass
+      Возврат ко всем категориям после выбора одной из них
+    status: pass
   
   - summary: |
-    фильтрация товара по цене
-  status: fail
+      фильтрация товара по цене
+    status: fail
   
   - summary: |
-    фильтрация товара по цвету
-  status: fail  
+      фильтрация товара по цвету
+    status: fail  
   
   - summary: |
-    фильтрация товара по размеру
-  status: fail   
+      фильтрация товара по размеру
+    status: fail   
   
   - summary: |
-    Успешный просмотр подробной информации о товаре
-  status: pass  
+      Успешный просмотр подробной информации о товаре
+    status: pass  
   
   - summary: |
-    Успешный переход между страницами
-  status: pass
+      Успешный переход между страницами
+     status: pass
   
   - summary: |
-    Успешное добавление товара в корзину
-  status: pass 
+      Успешное добавление товара в корзину
+    status: pass 
   
   - summary: |
-    Успешный просмотр корзины
-  status: pass 
+      Успешный просмотр корзины
+    status: pass 
   
   - summary: |
-    Успешный возврат в каталог после просмотра корзины
-  status: pass 
+      Успешный возврат в каталог после просмотра корзины
+    status: pass 
   
   - summary: |
-    Очистка корзины
-  status: pass
+      Очистка корзины
+    status: pass
   
   - summary: |
-    Оформление заказа
-  status: fail
+      Оформление заказа
+    status: fail
   
   - summary: |
-    Закрытие всплывающего окна "оформление заказа" кнопкой закрыть
-  status: pass
+      Закрытие всплывающего окна "оформление заказа" кнопкой закрыть
+    status: pass
   
   - summary: |
-    Закрытие всплывающего окна "оформление заказа" кнопкой х
-  status: fail
+      Закрытие всплывающего окна "оформление заказа" кнопкой х
+    status: fail
   
   - summary: |
-    Оплата товара
-  status: fail 
+      Оплата товара
+    status: fail 
   
   - summary: |
-    корректный поиск товара по ключевому слову
-  status: pass
+      корректный поиск товара по ключевому слову
+    status: pass
   
   - summary: |
-    корректный поиск товара по ключевому слову и по категории
-  status: pass
+      корректный поиск товара по ключевому слову и по категории
+    status: pass
   
   - summary: |
-    Поиск товара по ключевому слову и по категории
-  status: fail
+      Поиск товара по ключевому слову и по категории
+    status: fail
   
   - summary: |
-    Поиск товара по бренду
-  status: fail 
+      Поиск товара по бренду
+    status: fail 
   
   - summary: |
-    корзина хранится в сессии браузера
-  status: pass 
+      корзина хранится в сессии браузера
+    status: pass 
   
   - summary: |
-    сайт должен иметь мобильную версию
-  status: pass 
+      сайт должен иметь мобильную версию
+    status: pass 
   
   - summary: |
-    Совместимость с браузером Chrome
-  status: pass 
+      Совместимость с браузером Chrome
+    status: pass 
   
   - summary: |
-    Совместимость с браузером Firefox
-  status: pass 
+      Совместимость с браузером Firefox
+    status: pass 
   
   - summary: |
-    Переключение языка
-  status: fail 
+      Переключение языка
+    status: fail 
   
   - summary: |
-    Кнопка "в наличии" нажата
-  status: pass 
+      Кнопка "в наличии" нажата
+    status: pass 
   
   - summary: |
-    Кнопка "в наличии" отжата
-  status: pass
+      Кнопка "в наличии" отжата
+    status: pass
   
   - summary: |
-    кнопка логотипа
-  status: pass
+      кнопка логотипа
+    status: pass
   
   bugreports: 
   - summary: |
-    Некорректно работает поиск товара по ключевому слову
-  environment: |
-    Google Chrome   108.0.5359.124 (Официальная сборка), (arm64)
-    ОС macOS Monterey 12.6.2
-  steps-to-reproduce: |
-    1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
-    2. в поле поиска начать вводить iphone
-  expected-result: |
-    Должны быть выведены все айфоны, форма поиска не должна уезжать
-  actual-result: |
-    при вводе ip кнопка поиска уезжает вправо, все товары сдвигаются
+      Некорректно работает поиск товара по ключевому слову
+    environment: |
+      Google Chrome   108.0.5359.124 (Официальная сборка), (arm64)
+      ОС macOS Monterey 12.6.2
+    steps-to-reproduce: |
+      1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
+      2. в поле поиска начать вводить iphone
+    expected-result: |
+      Должны быть выведены все айфоны, форма поиска не должна уезжать
+    actual-result: |
+      при вводе ip кнопка поиска уезжает вправо, все товары сдвигаются
     
   - summary: |
-    Некорректно работает поиск товара по бренду
-  environment: |
-    Google Chrome   108.0.5359.124 (Официальная сборка), (arm64)
-    ОС macOS Monterey 12.6.2
-  steps-to-reproduce: |
-    1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
-    2. в поле Brand выбрать apple
-  expected-result: |
-    Выводятся все товары бренда apple
-  actual-result: |
-    сначала выводились только айфоны из бренда apple, теперь только макбуки
+      Некорректно работает поиск товара по бренду
+    environment: |
+      Google Chrome   108.0.5359.124 (Официальная сборка), (arm64)
+      ОС macOS Monterey 12.6.2
+    steps-to-reproduce: |
+      1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
+      2. в поле Brand выбрать apple
+    expected-result: |
+      Выводятся все товары бренда apple
+    actual-result: |
+      сначала выводились только айфоны из бренда apple, теперь только макбуки
     
 
       
