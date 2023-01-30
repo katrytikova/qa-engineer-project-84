@@ -37,11 +37,11 @@
   
 - summary: |
     Очистка корзины
-  status: fail
+  status: pass
   
 - summary: |
     Оформление заказа
-  status: pass
+  status: fail
   
 - summary: |
     Закрытие всплывающего окна "оформление заказа" кнопкой закрыть
