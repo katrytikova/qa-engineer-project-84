@@ -137,3 +137,16 @@
     Отображаются все товары магазина
   actual-result: |
     все товары пропадают
+    
+- summary: |
+    Не работает переход на главную страницу по нажатию логотипа
+  environment: |
+    Google Chrome	108.0.5359.124 (Официальная сборка), (arm64)
+    ОС macOS Monterey 12.6.2
+  steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
+    2. нажать логотип
+  expected-result: |
+    Сайт переходит на главную страницу
+  actual-result: |
+    ничего не происходит
