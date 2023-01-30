@@ -120,16 +120,31 @@ test-cases:
     actual-result: |
       Какой результат получился на самом деле
       
-      - summary: |
-    Поиск товара по ключевому слову и по категории
-  requirement: |
-    при неверном выборе сочетания категории и названия продукта выводится "ничего не найдено"
-  prerequisites:
-    Открыта страница https://hexlet-products-store.vercel.app/ 
-  test-data: |
-    товар=iPhone 9 категория=laptops
-  steps:
-    - в поле категория выбрать laptops
-    - в окне поиска начать вводить iPhone
+  - summary: |
+    Некорректно работает поиск товара по ключевому слову
+  environment: |
+    Google Chrome   108.0.5359.124 (Официальная сборка), (arm64)
+    ОС macOS Monterey 12.6.2
+  steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
+    2. в поле поиска начать вводить iphone
   expected-result: |
-    Выводится запись ничего не найдено
+    Должны быть выведены все айфоны, форма поиска не должна уезжать
+  actual-result: |
+    при вводе ip кнопка поиска уезжает вправо, все товары сдвигаются
+    
+      - summary: |
+    Некорректно работает поиск товара по бренду
+  environment: |
+    Google Chrome   108.0.5359.124 (Официальная сборка), (arm64)
+    ОС macOS Monterey 12.6.2
+  steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
+    2. в поле Brand выбрать apple
+  expected-result: |
+    Выводятся все товары бренда apple
+  actual-result: |
+    сначала выводились только айфоны из бренда apple, теперь только макбуки
+    
+
+      
