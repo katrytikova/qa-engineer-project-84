@@ -308,4 +308,16 @@
   expected-result: |
     Сайт открывается нв браузере Firefox
     
-    
+- summary: |
+    Переключение языка
+  requirement: |
+    Проверить корректное переключение языка
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    empty
+  steps:
+    - Нажать кнопку language
+    - выбрать русский язык
+  expected-result: |
+    Сайт должен быть переведен на русский язык
