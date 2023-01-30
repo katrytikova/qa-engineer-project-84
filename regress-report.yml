@@ -7,107 +7,107 @@ test-cases:
   - summary: |
       Возврат ко всем категориям после выбора одной из них
   status: pass
-  
+
   - summary: |
       фильтрация товара по цене
   status: fail
-  
+
   - summary: |
       фильтрация товара по цвету
   status: fail  
-  
+
   - summary: |
       фильтрация товара по размеру
   status: fail   
-  
+
   - summary: |
       Успешный просмотр подробной информации о товаре
   status: pass  
-  
+
   - summary: |
       Успешный переход между страницами
   status: pass
-  
+
   - summary: |
       Успешное добавление товара в корзину
   status: pass 
-  
+
   - summary: |
       Успешный просмотр корзины
   status: pass 
-  
+
   - summary: |
       Успешный возврат в каталог после просмотра корзины
   status: pass 
-  
+
   - summary: |
       Очистка корзины
   status: pass
-  
+
   - summary: |
       Оформление заказа
   status: fail
-  
+
   - summary: |
       Закрытие всплывающего окна "оформление заказа" кнопкой закрыть
   status: pass
-  
+
   - summary: |
       Закрытие всплывающего окна "оформление заказа" кнопкой х
   status: fail
-  
+
   - summary: |
       Оплата товара
   status: fail 
-  
+
   - summary: |
       корректный поиск товара по ключевому слову
   status: pass
-  
+
   - summary: |
       корректный поиск товара по ключевому слову и по категории
   status: pass
-  
+
   - summary: |
       Поиск товара по ключевому слову и по категории
   status: fail
-  
+
   - summary: |
       Поиск товара по бренду
   status: fail 
-  
+
   - summary: |
       корзина хранится в сессии браузера
   status: pass 
-  
+
   - summary: |
       сайт должен иметь мобильную версию
   status: pass 
-  
+
   - summary: |
       Совместимость с браузером Chrome
   status: pass 
-  
+
   - summary: |
       Совместимость с браузером Firefox
   status: pass 
-  
+
   - summary: |
       Переключение языка
   status: fail 
-  
+
   - summary: |
       Кнопка "в наличии" нажата
   status: pass 
-  
+
   - summary: |
       Кнопка "в наличии" отжата
   status: pass
-  
+
   - summary: |
       кнопка логотипа
   status: pass
-  
+
   bugreports: 
   - summary: |
       Некорректно работает поиск товара по ключевому слову
@@ -121,7 +121,7 @@ test-cases:
       Должны быть выведены все айфоны, форма поиска не должна уезжать
   actual-result: |
       при вводе ip кнопка поиска уезжает вправо, все товары сдвигаются
-    
+
   - summary: |
       Некорректно работает поиск товара по бренду
   environment: |
@@ -134,6 +134,3 @@ test-cases:
       Выводятся все товары бренда apple
   actual-result: |
       сначала выводились только айфоны из бренда apple, теперь только макбуки
-    
-
-      
