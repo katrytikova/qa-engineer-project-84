@@ -1,8 +1,21 @@
 ---
 - summary: |
+    Не работает Возврат ко всем категориям после выбора одной из них
+  environment: |
+    Google Chrome   108.0.5359.124 (Официальная сборка), (arm64)
+    ОС macOS Monterey 12.6.2
+  steps-to-reproduce: |
+    1. в поле категория выбрать smartphones
+    2. в поле категория выбрать все
+  expected-result: |
+    Должны быть выведены все товары
+  actual-result: |
+    Отсутствует выбор всех категорий
+    
+- summary: |
     Некорректно работает фильтрация товара по цене
   environment: |
-    Google Chrome	107.0.5304.121 (Официальная сборка) (64 бит)
+    Google Chrome	108.0.5359.124 (Официальная сборка), (arm64)
     ОС macOS Monterey 12.6.2
   steps-to-reproduce: |
     1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
@@ -15,7 +28,7 @@
 - summary: |
     Не работает фильтрация товара по цвету
   environment: |
-    Google Chrome	107.0.5304.121 (Официальная сборка) (64 бит)
+    Google Chrome	108.0.5359.124 (Официальная сборка), (arm64)
     ОС macOS Monterey 12.6.2
   steps-to-reproduce: |
     1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
@@ -28,7 +41,7 @@
 - summary: |
     Не работает фильтрация товара по размеру
   environment: |
-    Google Chrome	107.0.5304.121 (Официальная сборка) (64 бит)
+    Google Chrome	108.0.5359.124 (Официальная сборка), (arm64)
     ОС macOS Monterey 12.6.2
   steps-to-reproduce: |
     1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
@@ -41,7 +54,7 @@
 - summary: |
     Орфографическая ошибка всплывающего окна "оформление заказа"
   environment: |
-    Google Chrome	107.0.5304.121 (Официальная сборка) (64 бит)
+    Google Chrome	108.0.5359.124 (Официальная сборка), (arm64)
     ОС macOS Monterey 12.6.2
   steps-to-reproduce: |
     1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
@@ -56,7 +69,7 @@
 - summary: |
     Не работает Закрытие всплывающего окна "оформление заказа" кнопкой х
   environment: |
-    Google Chrome	107.0.5304.121 (Официальная сборка) (64 бит)
+    Google Chrome	108.0.5359.124 (Официальная сборка), (arm64)
     ОС macOS Monterey 12.6.2
   steps-to-reproduce: |
     1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
@@ -72,7 +85,7 @@
 - summary: |
     Не работает оплата товара
   environment: |
-    Google Chrome	107.0.5304.121 (Официальная сборка) (64 бит)
+    Google Chrome	108.0.5359.124 (Официальная сборка), (arm64)
     ОС macOS Monterey 12.6.2
   steps-to-reproduce: |
     1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
@@ -88,7 +101,7 @@
 - summary: |
     Некорректно работает поиск товара по бренду
   environment: |
-    Google Chrome	107.0.5304.121 (Официальная сборка) (64 бит)
+    Google Chrome	108.0.5359.124 (Официальная сборка), (arm64)
     ОС macOS Monterey 12.6.2
   steps-to-reproduce: |
     1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
@@ -101,7 +114,7 @@
 - summary: |
     Некорректно работает перевод сайта
   environment: |
-    Google Chrome	107.0.5304.121 (Официальная сборка) (64 бит)
+    Google Chrome	108.0.5359.124 (Официальная сборка), (arm64)
     ОС macOS Monterey 12.6.2
   steps-to-reproduce: |
     1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
@@ -115,7 +128,7 @@
 - summary: |
     Некорректно работает кнопка в наличии
   environment: |
-    Google Chrome	107.0.5304.121 (Официальная сборка) (64 бит)
+    Google Chrome	108.0.5359.124 (Официальная сборка), (arm64)
     ОС macOS Monterey 12.6.2
   steps-to-reproduce: |
     1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
