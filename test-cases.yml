@@ -91,7 +91,7 @@
     Товар должен добавиться в корзину
     
 - summary: |
-    Успешная просмотр корзины
+    Успешный просмотр корзины
   requirement: |
     Выбранный товар должен отображаться в корзине
   prerequisites:
@@ -118,18 +118,159 @@
     - нажать continue shopping
   expected-result: |
     Возврат в каталог после просмотра корзины
-    
+        
 - summary: |
-    Успешный возврат в каталог после просмотра корзины
+    Очистка корзины
   requirement: |
-    Возврат в каталог после просмотра корзины
+    Очистка корзины нажатием кнопки "очистить корзину", автоматический возврат в каталог
   prerequisites:
     Открыта страница https://hexlet-products-store.vercel.app/ 
   test-data: |
-    товар=iPhone 9 кнопка=add to cart
+    товар=iPhone 9
   steps:
-    - Нажать кнопку add to cart у товара iPhone 9
-    - нажать cart
-    - нажать continue shopping
+    - Нажать кнопку в корзину у товара iPhone 9
+    - нажать корзину
+    - нажать очистить корзину
   expected-result: |
-    Возврат в каталог после просмотра корзины
+    Пользователь остается в корзине
+    
+- summary: |
+    Оплата товара 
+  requirement: |
+    переход на страницу оплаты товара
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    товар=iPhone 9
+  steps:
+    - Нажать кнопку в корзину у товара iPhone 9
+    - нажать корзину
+    - нажать оформить заказ
+  expected-result: |
+    Появляется всплывающее окно заказ успешно формлен без оплаты. Грамматическая ошибка 
+    
+- summary: |
+    корректный поиск товара по ключевому слову
+  requirement: |
+    Выбираются только товары подходящие по ключевому слову
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    товар=iPhone 9
+  steps:
+    - в окне поиска начать вводить iPhone
+  expected-result: |
+    Выводятся только iphone
+    
+- summary: |
+    корректный поиск товара по категории
+  requirement: |
+    При корректном вводе параметров категории выводятся товары этой категории
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    категория=smartphones
+  steps:
+    - в поле категория выбрать smartphones
+  expected-result: |
+    Выбираются только smartphones
+    
+- summary: |
+    корректный поиск товара по ключевому слову и по категории
+  requirement: |
+    При корректном вводе параметров категории и названия выводятся правильные товары
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    товар=iPhone 9 категория=smartphones
+  steps:
+    - в поле категория выбрать smartphones
+    - в окне поиска начать вводить iPhone
+  expected-result: |
+    Выбираются только iphone в категории smartphones
+    
+- summary: |
+    Поиск товара по ключевому слову и по категории
+  requirement: |
+    при неверном выборе сочетания категории и названия продукта выводится "ничего не найдено"
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    товар=iPhone 9 категория=laptops
+  steps:
+    - в поле категория выбрать laptops
+    - в окне поиска начать вводить iPhone
+  expected-result: |
+    Выводится запись ничего не найдено
+    
+- summary: |
+    Поиск товара по бренду
+  requirement: |
+    Выбираются товары только выбранного бренда
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    Brand= apple
+  steps:
+    - в поле Brand выбрать apple
+  expected-result: |
+    Выводятся все товары бренда apple
+    
+- summary: |
+    корзина хранится в сессии браузера
+  requirement: |
+    корзина должна сохранятся в сессии браузера до его закрытия
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    товар=iPhone 9 
+  steps:
+    - открыть devtolls
+    - открыть application
+    - открыть session storage
+    - Нажать кнопку в корзину у товара iPhone 9
+    - нажать корзину
+    - проверить, что товары хранятся в сессии браузера
+  expected-result: |
+    Товары хранятся в сессии браузера
+    
+- summary: |
+    сайт должен иметь мобильную версию
+  requirement: |
+    Проверить сайт на мобильном устройстве xiaomi
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    empty
+  steps:
+    - Открыть сайт на мобильном устройстве xiaomi
+  expected-result: |
+    Сайт открывается на мобильном устройстве
+    
+- summary: |
+    Совместимость с браузером Chrome
+  requirement: |
+    Проверить сайт в браузере Chrome
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    empty
+  steps:
+    - Открыть сайт в браузере Chrome
+  expected-result: |
+    Сайт открывается нв браузере Chrome
+    
+- summary: |
+    Совместимость с браузером Firefox
+  requirement: |
+    Проверить сайт в браузере Firefox
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    empty
+  steps:
+    - Открыть сайт в браузере Firefox
+  expected-result: |
+    Сайт открывается нв браузере Firefox
+    
+    
