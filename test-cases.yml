@@ -362,5 +362,16 @@
   expected-result: |
     Должны отображаться все товары
 
-
+- summary: |
+    кнопка логотипа
+  requirement: |
+    Проверить переход на главную страницу по кнопке логотипа
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    empty
+  steps:
+    - нажать логотип
+  expected-result: |
+    сайт должен перейти на главную страницу
 
