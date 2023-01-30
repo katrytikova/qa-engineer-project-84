@@ -321,3 +321,32 @@
     - выбрать русский язык
   expected-result: |
     Сайт должен быть переведен на русский язык
+
+- summary: |
+    Кнопка "в наличии" нажата
+  requirement: |
+    Проверить корректную работу кнопки "в наличии"
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    empty
+  steps:
+    - Нажать кнопку в наличии
+  expected-result: |
+    Должны отображаться товары, которые есть в наличии
+    
+- summary: |
+    Кнопка "в наличии" отжата
+  requirement: |
+    Проверить корректную работу кнопки "в наличии"
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    empty
+  steps:
+    - Отжать кнопку в наличии
+  expected-result: |
+    Должны отображаться все товары
+
+
+
