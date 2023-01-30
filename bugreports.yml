@@ -97,3 +97,30 @@
     Выводятся все товары бренда apple
   actual-result: |
     Выводятся не все товары бренда apple
+
+- summary: |
+    Некорректно работает перевод сайта
+  environment: |
+    Google Chrome	107.0.5304.121 (Официальная сборка) (64 бит)
+    ОС macOS Monterey 12.6.2
+  steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
+    2. Нажать кнопку language
+    3. выбрать русский язык
+  expected-result: |
+    Сайт переводится на русский язык
+  actual-result: |
+    Переводятся на русский язык только менню сайта
+    
+- summary: |
+    Некорректно работает кнопка в наличии
+  environment: |
+    Google Chrome	107.0.5304.121 (Официальная сборка) (64 бит)
+    ОС macOS Monterey 12.6.2
+  steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
+    2. отжать кнопку в наличии
+  expected-result: |
+    Отображаются все товары магазина
+  actual-result: |
+    все товары пропадают
