@@ -6,7 +6,7 @@ test-cases:
   
   - summary: |
     Возврат ко всем категориям после выбора одной из них
-    status: pass
+  status: pass
 
   - summary: |
     фильтрация товара по цене
