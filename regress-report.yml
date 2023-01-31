@@ -1,20 +1,20 @@
 ---
 test-cases:
   - summary: |
-    Успешный поиск товара по категории. Пример: тест
-  status: pass
+      Успешный поиск товара по категории.
+    status: pass
   
   - summary: |
     Возврат ко всем категориям после выбора одной из них
-  status: pass
+    status: pass
 
   - summary: |
     фильтрация товара по цене
-  status: fail
+    status: fail
 
   - summary: |
       фильтрация товара по цвету
-  status: fail  
+    status: fail  
 
   - summary: |
       фильтрация товара по размеру
