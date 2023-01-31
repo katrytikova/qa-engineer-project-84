@@ -5,11 +5,11 @@ test-cases:
     status: pass
   
   - summary: |
-    Возврат ко всем категориям после выбора одной из них
+      Возврат ко всем категориям после выбора одной из них
     status: pass
 
   - summary: |
-    фильтрация товара по цене
+      фильтрация товара по цене
     status: fail
 
   - summary: |
@@ -108,7 +108,7 @@ test-cases:
       кнопка логотипа
     status: pass
 
-  bugreports: 
+bugreports: 
   - summary: |
       Некорректно работает поиск товара по ключевому слову
     environment: |
