@@ -52,7 +52,7 @@ test-cases:
       Успешный переход вперед между страницами
     status: pass
 
- - summary: |
+  - summary: |
       Успешный переход назад между страницами
     status: pass
 
