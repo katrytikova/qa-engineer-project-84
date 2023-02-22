@@ -77,6 +77,86 @@
     - Нажать на товар iPhone 9
   expected-result: |
     Должна открыться карточка товара
+
+- summary: |
+    корректный поиск товара по ключевому слову
+  requirement: |
+    При поиске по ключевому слову выводятся только подходящие товары
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    товар=iPhone 9
+  steps:
+    - в окне поиска начать вводить iPhone
+  expected-result: |
+    Выводятся только iphone
+    
+- summary: |
+    корректный поиск товара по ключевому слову и по категории
+  requirement: |
+    При корректном вводе параметров категории и названия выводятся подходящие товары
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    товар=iPhone 9 категория=smartphones
+  steps:
+    - в поле категория выбрать smartphones
+    - в окне поиска начать вводить iPhone
+  expected-result: |
+    Выбираются только iphone в категории smartphones
+    
+- summary: |
+    Поиск товара по ключевому слову и по категории
+  requirement: |
+    При неверном выборе сочетания категории и названия товара выводится "ничего не найдено"
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    товар=iPhone 9 категория=laptops
+  steps:
+    - в поле категория выбрать laptops
+    - в окне поиска начать вводить iPhone
+  expected-result: |
+    Выводится запись ничего не найдено
+    
+- summary: |
+    Поиск товара по бренду
+  requirement: |
+    При поиске товара по бренду выводятся товары только выбранного бренда
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    Brand=apple
+  steps:
+    - в поле Brand выбрать apple
+  expected-result: |
+    Выводятся все товары бренда apple
+
+- summary: |
+    Фильтрация товара "в наличии"
+  requirement: |
+    Проверить корректную работу кнопки "в наличии"
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    empty
+  steps:
+    - Нажать кнопку в наличии
+  expected-result: |
+    Должны отображаться товары, которые есть в наличии
+    
+- summary: |
+    Фильтрация товара "в наличии", отобразить все товары
+  requirement: |
+    Проверить корректную работу кнопки "в наличии"
+  prerequisites:
+    Открыта страница https://hexlet-products-store.vercel.app/ 
+  test-data: |
+    empty
+  steps:
+    - Отжать кнопку в наличии
+  expected-result: |
+    Должны отображаться все товары
     
 - summary: |
     Успешный переход вперед между страницами
@@ -211,61 +291,7 @@
     - нажать "оплатить товар"
   expected-result: |
     Переход на страницу оплаты заказа
-    
-- summary: |
-    корректный поиск товара по ключевому слову
-  requirement: |
-    При поиске по ключевому слову выводятся только подходящие товары
-  prerequisites:
-    Открыта страница https://hexlet-products-store.vercel.app/ 
-  test-data: |
-    товар=iPhone 9
-  steps:
-    - в окне поиска начать вводить iPhone
-  expected-result: |
-    Выводятся только iphone
-    
-- summary: |
-    корректный поиск товара по ключевому слову и по категории
-  requirement: |
-    При корректном вводе параметров категории и названия выводятся подходящие товары
-  prerequisites:
-    Открыта страница https://hexlet-products-store.vercel.app/ 
-  test-data: |
-    товар=iPhone 9 категория=smartphones
-  steps:
-    - в поле категория выбрать smartphones
-    - в окне поиска начать вводить iPhone
-  expected-result: |
-    Выбираются только iphone в категории smartphones
-    
-- summary: |
-    Поиск товара по ключевому слову и по категории
-  requirement: |
-    При неверном выборе сочетания категории и названия товара выводится "ничего не найдено"
-  prerequisites:
-    Открыта страница https://hexlet-products-store.vercel.app/ 
-  test-data: |
-    товар=iPhone 9 категория=laptops
-  steps:
-    - в поле категория выбрать laptops
-    - в окне поиска начать вводить iPhone
-  expected-result: |
-    Выводится запись ничего не найдено
-    
-- summary: |
-    Поиск товара по бренду
-  requirement: |
-    При поиске товара по бренду выводятся товары только выбранного бренда
-  prerequisites:
-    Открыта страница https://hexlet-products-store.vercel.app/ 
-  test-data: |
-    Brand=apple
-  steps:
-    - в поле Brand выбрать apple
-  expected-result: |
-    Выводятся все товары бренда apple
-    
+     
 - summary: |
     корзина хранится в сессии браузера
   requirement: |
@@ -336,32 +362,6 @@
     - выбрать русский язык
   expected-result: |
     Сайт должен быть переведен на русский язык
-
-- summary: |
-    Фильтрация товара "в наличии"
-  requirement: |
-    Проверить корректную работу кнопки "в наличии"
-  prerequisites:
-    Открыта страница https://hexlet-products-store.vercel.app/ 
-  test-data: |
-    empty
-  steps:
-    - Нажать кнопку в наличии
-  expected-result: |
-    Должны отображаться товары, которые есть в наличии
-    
-- summary: |
-    Фильтрация товара "в наличии", отобразить все товары
-  requirement: |
-    Проверить корректную работу кнопки "в наличии"
-  prerequisites:
-    Открыта страница https://hexlet-products-store.vercel.app/ 
-  test-data: |
-    empty
-  steps:
-    - Отжать кнопку в наличии
-  expected-result: |
-    Должны отображаться все товары
 
 - summary: |
     кнопка логотипа

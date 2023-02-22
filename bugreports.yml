@@ -1,6 +1,6 @@
 ---
 - summary: |
-    Не работает Возврат ко всем категориям после сброса фильтра
+    Не работает возврат ко всем категориям после сброса фильтра
   environment: |
     Google Chrome   108.0.5359.124 (Официальная сборка), (arm64)
     ОС macOS Monterey 12.6.2
@@ -50,6 +50,32 @@
     Должны быть реализована фильтрация товара по размеру
   actual-result: |
     Фильтр по размеру отсутствует
+
+- summary: |
+    Некорректно работает поиск товара по бренду
+  environment: |
+    Google Chrome 108.0.5359.124 (Официальная сборка), (arm64)
+    ОС macOS Monterey 12.6.2
+  steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
+    2. в поле Brand выбрать apple
+  expected-result: |
+    Выводятся все товары бренда apple
+  actual-result: |
+    Выводятся не все товары бренда apple
+
+- summary: |
+    Некорректно работает фильтрация товара в наличии
+  environment: |
+    Google Chrome 108.0.5359.124 (Официальная сборка), (arm64)
+    ОС macOS Monterey 12.6.2
+  steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
+    2. отжать кнопку "в наличии"
+  expected-result: |
+    Отображаются все товары магазина
+  actual-result: |
+    все товары пропадают
     
 - summary: |
     Орфографическая ошибка всплывающего окна "оформление заказа"
@@ -97,19 +123,6 @@
     Переход к оплате товара
   actual-result: |
     Оплата товара не реализована
-    
-- summary: |
-    Некорректно работает поиск товара по бренду
-  environment: |
-    Google Chrome	108.0.5359.124 (Официальная сборка), (arm64)
-    ОС macOS Monterey 12.6.2
-  steps-to-reproduce: |
-    1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
-    2. в поле Brand выбрать apple
-  expected-result: |
-    Выводятся все товары бренда apple
-  actual-result: |
-    Выводятся не все товары бренда apple
 
 - summary: |
     Некорректно работает перевод сайта
@@ -124,19 +137,6 @@
     Сайт переводится на русский язык
   actual-result: |
     Переводятся на русский язык только меню сайта
-    
-- summary: |
-    Некорректно работает фильтрация товара в наличии
-  environment: |
-    Google Chrome	108.0.5359.124 (Официальная сборка), (arm64)
-    ОС macOS Monterey 12.6.2
-  steps-to-reproduce: |
-    1. Зайти на страницу https://hexlet-products-store.vercel.app/ 
-    2. отжать кнопку "в наличии"
-  expected-result: |
-    Отображаются все товары магазина
-  actual-result: |
-    все товары пропадают
     
 - summary: |
     Не работает переход на главную страницу по нажатию логотипа
